@@ -1,0 +1,11 @@
+﻿extends layout
+
+block content
+  h1= title
+  p Welcome, please enter a number to generate a roman numeral.
+
+  // Roman Numeral Finder form
+  form(method='POST' action='/findNumeral')
+    input(id='number' type='number' name='number' )
+    button(id='btn' type='submit') Submit
+  p= romanNumeral
